@@ -22,6 +22,14 @@
   <h5 class="my-1 mr-md-auto font-weight-normal p-1">Product Hunt</h5>
 
   {% if user.is_authenticated %}
+  <nav class="my-2 my-md-0 mr-md-2">
+    <a class="p-2 text-dark">Welcome, {{ user.username }}</a>
+  </nav>
+
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'create' %}">Create</a>
+  </nav>
+
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
   </nav>
