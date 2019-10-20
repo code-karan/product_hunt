@@ -2,6 +2,41 @@
 
 {% block content %}
 
-create product
+<div class='conatiner'>
+    <h3>Add a new Product</h3>
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label>Title :</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter Title">
+        </br>
+            <label>Url :</label>
+            <input type="text" class="form-control" name="url" placeholder="Url of the product">
+        </br>
+            <label>Image :</label>
+            <input type="file" class="form-control" name="image">
+        </br>
+            <label>Icon :</label>
+            <input type="file" class="form-control" name="icon">
+        </br>
+            <label>Summary :</label>
+            <input type="textbox" class="form-control" name="summary" placeholder="Product summary">
+
+
+        </br>
+            <button type="submit" class="btn btn-primary btn-lg">Add Product!</button>
+        </div>
+
+
+    </form>
+
+</div>
 
 {% endblock %}
