@@ -19,7 +19,11 @@
   <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-5 mb-3 bg-light border-bottom shadow-sm">
   <img src='{% static "logo.png" %}' height="40" width="40" class="d-inline-block align-top" />
-  <h5 class="my-1 mr-md-auto font-weight-normal p-1">Product Hunt</h5>
+  <h5 class="my-1 mr-md-auto font-weight-normal p-1"><a class="text-dark" href="{% url 'home' %}">Product Hunt</a></h5>
+
+  
+    
+  
 
   {% if user.is_authenticated %}
   <nav class="my-2 my-md-0 mr-md-2">

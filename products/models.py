@@ -15,7 +15,7 @@ class Product(models.Model):
         return self.title
 
     def summary_short(self):
-        return self.body[:100] + '...Click to read more'
+        return self.summary[:100] + '...Click to read more'
 
     def new_date(self):
         return self.date.strftime('%b %e, %Y')

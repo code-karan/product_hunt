@@ -2,8 +2,11 @@
 
 {% block content %}
 
-<div class="container">
-<h3>Homepage</h3>
-</div>
+{% for product in products.all reversed %}
+
+<a href="{% url 'detail' product.id %}">{{ product.title }}</a><br>
+{{ product.summary_short }}<br>
+<br>
+{% endfor %}
 
 {% endblock %}
